@@ -1,3 +1,5 @@
+using Scalar.AspNetCore;
+
 namespace WebAPI;
 
 public class Program
@@ -18,6 +20,8 @@ public class Program
         if (app.Environment.IsDevelopment())
         {
             app.MapOpenApi();
+            app.MapScalarApiReference(); // Accessible at https://localhost:7001/scalar/v1
+
         }
 
         app.UseHttpsRedirection();
