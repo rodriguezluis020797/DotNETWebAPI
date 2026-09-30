@@ -11,6 +11,16 @@ public class Program
         // Add services to the container.
         builder.Services.AddAuthorization();
 
+        /*
+         * Registering HTTP context service. Letting .NET do the work for it.
+         */
+        builder.Services.AddHttpContextAccessor();
+
+        /*
+         * We need to manually add the controllers we are building.
+         */
+        builder.Services.AddControllers();
+
         // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
         builder.Services.AddOpenApi();
 
@@ -21,7 +31,6 @@ public class Program
         {
             app.MapOpenApi();
             app.MapScalarApiReference(); // Accessible at https://localhost:7001/scalar/v1
-
         }
 
         app.UseHttpsRedirection();
@@ -33,6 +42,9 @@ public class Program
             "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
         };
 
+        /*
+         * Minimal API endpoint. We're going to take this and implement elsewhere.
+         */
         app.MapGet("/weatherforecast", (HttpContext httpContext) =>
             {
                 var forecast = Enumerable.Range(1, 5).Select(index =>
@@ -47,6 +59,7 @@ public class Program
             })
             .WithName("GetWeatherForecast");
 
+        app.MapControllers();
         app.Run();
     }
 }
