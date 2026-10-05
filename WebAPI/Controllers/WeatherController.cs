@@ -36,7 +36,7 @@ public class WeatherController(IHttpContextAccessor httpContext) : Controller
     {
         {
             /*
-             * Replacing the underscore with a space. If you copy enter 'neighborhood=Los Angeles' as a whole it will
+             * Replacing the underscore with a space. If you enter 'neighborhood=Los Angeles' with a space it will
              * work as expected since it gets URL encoded, but for now this is easier so you can just click the link.
              */
             neighborhood = neighborhood.Replace("_", " ");
