@@ -18,7 +18,7 @@ public class TransientCounterService : ITransientCounterService
     {
         Console.WriteLine($"{declarationName} {nameof(GetClassName)} -");
         Console.WriteLine($"{declarationName} {nameof(GetClassName)} +");
-        return Task.FromResult(nameof(ScopedCounterServiceA));
+        return Task.FromResult(nameof(TransientCounterService));
     }
 
     public Task AddToCount(string declarationName)

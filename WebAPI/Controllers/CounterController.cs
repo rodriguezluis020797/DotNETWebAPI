@@ -20,7 +20,7 @@ public class CounterController(
     ITransientCounterService _transientCounterService2,
     ISingletonCounterService _singletonCounterService1,
     ISingletonCounterService _singletonCounterService2
-) : Controller
+) : ControllerBase
 {
     [HttpGet]
     public async Task<IActionResult> AddToCountScoped()

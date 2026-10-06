@@ -19,7 +19,7 @@ namespace WebAPI.Controllers;
  * HttpContext specifically lets us see HTTP specific values.
  * See below.
  */
-public class WeatherController(IHttpContextAccessor httpContext) : Controller
+public class WeatherController(IHttpContextAccessor httpContext) : ControllerBase
 {
     /*
      * [HttpGet] is the HTTP method. Gets are best used when there is no JSON body for the API to read

@@ -28,7 +28,7 @@ public class SingletonCounterService : ISingletonCounterService
 
         /*
          * To keep this singleton service thread safe, we add Interlocked.Increment(ref Count), wich increases by 1.
-         * Interlocked.Increment(ref Count, 2) would increase by 2, etc.
+         * Interlocked.Add(ref Count, 2) would increase by 2, etc.
          */
         var newCount = Interlocked.Increment(ref Count);
         Console.WriteLine($"{declarationName} {nameof(newCount)}: {newCount}");
