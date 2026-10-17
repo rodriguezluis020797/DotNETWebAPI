@@ -17,9 +17,9 @@ public class SingletonCounterService : ISingletonCounterService
 
     public Task<string> GetClassName(string declarationName)
     {
-        Console.WriteLine($"{declarationName} {nameof(GetClassName)} -");
         Console.WriteLine($"{declarationName} {nameof(GetClassName)} +");
-        return Task.FromResult(nameof(ScopedCounterServiceA));
+        Console.WriteLine($"{declarationName} {nameof(GetClassName)} -");
+        return Task.FromResult(nameof(SingletonCounterService));
     }
 
     public Task AddToCount(string declarationName)

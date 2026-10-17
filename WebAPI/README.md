@@ -5,12 +5,12 @@ of the lesson.
 
 ## Topics
 
-| Topic                                                       | Where in the code                                                               | Status  |
-|-------------------------------------------------------------|---------------------------------------------------------------------------------|---------|
-| Dependency injection and service lifetimes                  | `Program.cs` (Services region), `Services/`, `Controllers/CounterController.cs` | Done    |
-| Controller basics: routing, query parameters, `HttpContext` | `Controllers/WeatherController.cs`                                              | Done    |
-| Thread safety                                               | —                                                                               | Planned |
-| Entity Framework Core                                       | —                                                                               | Planned |
+| Topic                                                                                     | Where in the code                                                               | Status  |
+|-------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------|---------|
+| Dependency injection and service lifetimes                                                | `Program.cs` (Services region), `Services/`, `Controllers/CounterController.cs` | Done    |
+| Controller basics: routing, query parameters, `HttpContext` (no blog post for this topic) | `Controllers/WeatherController.cs`                                              | Done    |
+| Thread safety                                                                             | —                                                                               | Planned |
+| Entity Framework Core                                                                     | —                                                                               | Planned |
 
 ## Getting started
 
