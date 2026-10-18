@@ -141,7 +141,20 @@ public class Program
          * details.
          */
 
+        /*
+         * See the dependency injection post for more details
+         */
         builder.Services.AddSingleton<ISingletonCounterService, SingletonCounterService>();
+
+        #endregion
+
+        #region Shared Mutable State
+
+        /*
+         * We're going to inject ISharedMutableState as a singleton so that it has a shared mutable state.
+         */
+
+        builder.Services.AddSingleton<ISharedMutableStateService, SharedMutableStateService>();
 
         #endregion
     }
